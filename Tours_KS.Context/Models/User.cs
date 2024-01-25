@@ -21,6 +21,7 @@ namespace Tours_KS.Context.Models
         public string Password { get; set; }
         
         public Role RoleType { get; set; }
+
         public ICollection<Order> Order { get; set; }
 
     }

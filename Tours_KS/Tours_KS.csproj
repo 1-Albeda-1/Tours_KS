@@ -94,11 +94,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tours_KS.Context\Tours_KS.Context.csproj">
-      <Project>{4c05dddf-5645-4b36-b36c-f6a41e9d3616}</Project>
+      <Project>{8ed1ec9d-db45-48b8-9c6e-875168f40b37}</Project>
       <Name>Tours_KS.Context</Name>
     </ProjectReference>
   </ItemGroup>

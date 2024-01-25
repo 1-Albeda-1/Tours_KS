@@ -20,6 +20,7 @@ namespace Tours_KS.Context.Models
         
         public short AllSale {  get; set; }
         public ICollection<Tour> Tours { get; set; }
+        
         public Order()
         {
             Tours = new HashSet<Tour>();

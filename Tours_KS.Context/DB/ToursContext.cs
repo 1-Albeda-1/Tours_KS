@@ -15,8 +15,10 @@ namespace Tours_KS.Context.DB
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<HotelComment> HotelComments { get; set; }
         public DbSet<HotelImage> HotelImages { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<Tour> Tours { get; set; }
         public DbSet<Type> Types { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public ToursContext() : base("DefaultConnection") 
         {

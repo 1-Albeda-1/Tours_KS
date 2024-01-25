@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Context")]
+[assembly: AssemblyTitle("Tours_KS.Context")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Context")]
+[assembly: AssemblyProduct("Tours_KS.Context")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("4c05dddf-5645-4b36-b36c-f6a41e9d3616")]
+[assembly: Guid("8ed1ec9d-db45-48b8-9c6e-875168f40b37")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
