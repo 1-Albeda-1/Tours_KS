@@ -21,8 +21,12 @@ namespace Tours_KS.Context.Models
         public decimal Price { get; set; }
 
         public bool IsActual { get; set; }
+        
+        public string CountryCode { get; set; }
 
-   
+        public Country Country { get; set; }
+
+
         public ICollection<Hotel> Hotels { get; set; }
 
         public ICollection<Type> Types { get; set; }

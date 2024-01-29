@@ -56,13 +56,17 @@
     <Compile Include="Migrations\202401251556199_CreateDB.designer.cs">
       <DependentUpon>202401251556199_CreateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202401270726003_ChangeCountry.cs" />
+    <Compile Include="Migrations\202401270726003_ChangeCountry.designer.cs">
+      <DependentUpon>202401270726003_ChangeCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Hotel.cs" />
     <Compile Include="Models\HotelComment.cs" />
     <Compile Include="Models\HotelImage.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Enums\Role.cs" />
     <Compile Include="Models\Tour.cs" />
     <Compile Include="Models\Type.cs" />
     <Compile Include="Models\User.cs" />
@@ -78,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202401251556199_CreateDB.resx">
       <DependentUpon>202401251556199_CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401270726003_ChangeCountry.resx">
+      <DependentUpon>202401270726003_ChangeCountry.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
