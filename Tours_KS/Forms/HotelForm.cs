@@ -21,10 +21,10 @@ namespace Tours_KS.Forms
 
         private void HotelForm_Load(object sender, EventArgs e)
         {
+            dataGridView1.AutoGenerateColumns = false;
             using(var db = new ToursContext())
             {
-                //db.Hotels.Load();
-                //dataGridView1.DataSource = db.Hotels.Local.ToBindingList();
+                dataGridView1.DataSource = db.Hotels.Include(x => x.Country).ToList();
             }
         }
 
@@ -34,5 +34,6 @@ namespace Tours_KS.Forms
             form.ShowDialog();
             this.Hide();
         }
+
     }
 }

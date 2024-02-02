@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,5 +17,8 @@ namespace Tours_KS.Context.Models
         
         public ICollection<Hotel> Hotels { get; set; }
         public ICollection<Tour> Tours { get; set; }
+
+        public override string ToString()
+         => Name;
     }
 }
