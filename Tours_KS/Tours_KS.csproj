@@ -56,11 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\HotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Forms\HotelForm.Designer.cs">
+      <DependentUpon>HotelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TourForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TourForm.Designer.cs">
+      <DependentUpon>TourForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +76,11 @@
     <Compile Include="TourInfo.Designer.cs">
       <DependentUpon>TourInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\HotelForm.resx">
+      <DependentUpon>HotelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TourForm.resx">
+      <DependentUpon>TourForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
