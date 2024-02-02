@@ -17,6 +17,7 @@ namespace Tours_KS
 {
     public partial class TourForm : Form
     {
+        private decimal allCount = 0;
         public TourForm()
         {
             InitializeComponent();
@@ -50,19 +51,22 @@ namespace Tours_KS
                 comboBoxType.SelectedIndex = 0;
 
                 var tours = db.Tours.Include(x => x.Types).ToList();
+                allCount = 0;
                 foreach (var tour in tours)
-                {
-
+                { 
                     var tourInfo = new TourInfo(tour);
                     tourInfo.Parent = flowLayoutPanel1;
                     tourInfo.ImageChanged += TourInfo_ImageChanged;
+                    allCount += tour.Price * tour.TicketCount;
                 }
             }
+            labelAllPrice.Text = allCount.ToString();
         }
         private void Filter()
         {
             if (comboBoxType.SelectedItem == null) return;
             var selectedTypeId = ((Type)comboBoxType.SelectedItem).Id;
+            allCount = 0;
             foreach (var item in flowLayoutPanel1.Controls)
             {
                 var visible = true;
@@ -80,13 +84,19 @@ namespace Tours_KS
                     }
 
                     if (!(string.IsNullOrEmpty(textBoxSearch.Text) ||
-                        tourInfo.Tour.Name.Contains(textBoxSearch.Text)))
+                        tourInfo.Tour.Name.ToLower().Contains(textBoxSearch.Text.ToLower())))
                     {
                         visible = false;
                     }
                     tourInfo.Visible = visible;
+
+                    if(visible)
+                    {
+                        allCount += tourInfo.Tour.TicketCount * tourInfo.Tour.Price;
+                    }
                 }
             }
+            labelAllPrice.Text = allCount.ToString();
         }
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
