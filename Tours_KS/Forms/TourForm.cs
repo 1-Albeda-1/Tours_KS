@@ -49,7 +49,7 @@ namespace Tours_KS
 
                 comboBoxType.SelectedIndex = 0;
 
-                var tours = db.Tours.ToList();
+                var tours = db.Tours.Include(x => x.Types).ToList();
                 foreach (var tour in tours)
                 {
 
