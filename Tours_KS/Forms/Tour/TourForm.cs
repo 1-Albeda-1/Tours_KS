@@ -119,7 +119,9 @@ namespace Tours_KS
         private void отелиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HotelForm form = new HotelForm();
+            this.Hide();
             form.ShowDialog();
+            
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -141,6 +143,16 @@ namespace Tours_KS
             tourInfo.Parent = flowLayoutPanel1;
             allCount += tourInfo.Tour.Price * tourInfo.Tour.TicketCount;
             labelAllPrice.Text = allCount.ToString();
+        }
+
+        private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TourForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

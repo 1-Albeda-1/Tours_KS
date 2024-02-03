@@ -31,9 +31,18 @@ namespace Tours_KS.Forms
         private void турыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TourForm form = new TourForm();
-            form.ShowDialog();
             this.Hide();
+            form.ShowDialog();
         }
 
+        private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void HotelForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
