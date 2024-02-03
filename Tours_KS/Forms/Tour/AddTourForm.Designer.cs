@@ -31,7 +31,7 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxDiscription = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.numericUpDownTicketCount = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownPrice = new System.Windows.Forms.NumericUpDown();
             this.checkBoxActual = new System.Windows.Forms.CheckBox();
@@ -76,18 +76,23 @@
             this.textBoxName.Size = new System.Drawing.Size(143, 26);
             this.textBoxName.TabIndex = 2;
             // 
-            // textBoxDiscription
+            // textBoxDescription
             // 
-            this.textBoxDiscription.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiscription.Location = new System.Drawing.Point(138, 80);
-            this.textBoxDiscription.Name = "textBoxDiscription";
-            this.textBoxDiscription.Size = new System.Drawing.Size(143, 26);
-            this.textBoxDiscription.TabIndex = 3;
+            this.textBoxDescription.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescription.Location = new System.Drawing.Point(138, 80);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(143, 26);
+            this.textBoxDescription.TabIndex = 3;
             // 
             // numericUpDownTicketCount
             // 
             this.numericUpDownTicketCount.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownTicketCount.Location = new System.Drawing.Point(138, 130);
+            this.numericUpDownTicketCount.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.numericUpDownTicketCount.Minimum = new decimal(new int[] {
             1,
             0,
@@ -218,7 +223,7 @@
             this.Controls.Add(this.checkBoxActual);
             this.Controls.Add(this.numericUpDownPrice);
             this.Controls.Add(this.numericUpDownTicketCount);
-            this.Controls.Add(this.textBoxDiscription);
+            this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSave);
@@ -236,7 +241,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxDiscription;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.NumericUpDown numericUpDownTicketCount;
         private System.Windows.Forms.NumericUpDown numericUpDownPrice;
         private System.Windows.Forms.CheckBox checkBoxActual;

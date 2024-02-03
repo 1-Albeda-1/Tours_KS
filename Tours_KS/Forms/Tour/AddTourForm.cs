@@ -39,11 +39,16 @@ namespace Tours_KS.Forms.Tour
 
         public AddTourForm(Tours_KS.Context.Models.Tour tour) : this()
         {
-            this.Text = "Изменить";
+            this.Text = "Изменить тур";
             Tour = tour;
             textBoxName.Text = Tour.Name;
+            textBoxDescription.Text = Tour.Description;
             numericUpDownTicketCount.Value = Tour.TicketCount;
             numericUpDownPrice.Value = Tour.Price;
+            if (Tour.IsActual == true)
+            {
+                checkBoxActual.Checked = true;
+            }
 
             var ids = Tour.Types.Select(x => x.Id).ToList();
             for (int i = 0; i < checkedListBoxTypes.Items.Count; i++)
@@ -61,13 +66,17 @@ namespace Tours_KS.Forms.Tour
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Tour.Name = textBoxName.Text;
-            Tour.Description = textBoxDiscription.Text;
+            Tour.Description = textBoxDescription.Text;
             Tour.CountryCode = ((Country)comboBoxCountry.SelectedItem).Code;
             Tour.TicketCount = (int)numericUpDownTicketCount.Value;
             if(checkBoxActual.Checked)
             {
                 Tour.IsActual = true;
-            }          
+            }
+            else
+            {
+                Tour.IsActual = false;
+            }
             Tour.Price = numericUpDownPrice.Value;
             DialogResult = DialogResult.OK;
         }
