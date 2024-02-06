@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tours_KS.Forms.Authorization;
 
 namespace Tours_KS
 {
@@ -16,7 +17,7 @@ namespace Tours_KS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TourForm());
+            Application.Run(new AuthorizationForm());
         }
     }
 }

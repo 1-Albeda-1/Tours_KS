@@ -56,11 +56,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\HotelForm.cs">
+    <Compile Include="Forms\Authorization\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HotelForm.Designer.cs">
+    <Compile Include="Forms\Authorization\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hotel\AddHotelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hotel\AddHotelForm.Designer.cs">
+      <DependentUpon>AddHotelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hotel\HotelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hotel\HotelForm.Designer.cs">
       <DependentUpon>HotelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tour\AddTourForm.cs">
       <SubType>Form</SubType>
@@ -82,7 +100,14 @@
     <Compile Include="TourInfo.Designer.cs">
       <DependentUpon>TourInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\HotelForm.resx">
+    <Compile Include="Users.cs" />
+    <EmbeddedResource Include="Forms\Authorization\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hotel\AddHotelForm.resx">
+      <DependentUpon>AddHotelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hotel\HotelForm.resx">
       <DependentUpon>HotelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tour\AddTourForm.resx">

@@ -11,5 +11,6 @@ namespace Tours_KS.Context.Models
         User,
         Manager,
         Administrator,
+        Guest
     }
 }
