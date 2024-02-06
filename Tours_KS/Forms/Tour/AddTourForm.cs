@@ -65,20 +65,25 @@ namespace Tours_KS.Forms.Tour
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Tour.Name = textBoxName.Text;
-            Tour.Description = textBoxDescription.Text;
-            Tour.CountryCode = ((Country)comboBoxCountry.SelectedItem).Code;
-            Tour.TicketCount = (int)numericUpDownTicketCount.Value;
-            if(checkBoxActual.Checked)
+            if(!string.IsNullOrWhiteSpace(textBoxName.Text) && !string.IsNullOrWhiteSpace(textBoxDescription.Text))
             {
-                Tour.IsActual = true;
+                Tour.Name = textBoxName.Text;
+                Tour.Description = textBoxDescription.Text;
+                Tour.CountryCode = ((Country)comboBoxCountry.SelectedItem).Code;
+                Tour.TicketCount = (int)numericUpDownTicketCount.Value;
+                if (checkBoxActual.Checked)
+                {
+                    Tour.IsActual = true;
+                }
+                else
+                {
+                    Tour.IsActual = false;
+                }
+                Tour.Price = numericUpDownPrice.Value;
+                DialogResult = DialogResult.OK;
             }
             else
-            {
-                Tour.IsActual = false;
-            }
-            Tour.Price = numericUpDownPrice.Value;
-            DialogResult = DialogResult.OK;
+                MessageBox.Show("Заполните все поля перед сохранением!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

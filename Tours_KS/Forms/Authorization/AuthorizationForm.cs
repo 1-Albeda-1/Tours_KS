@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tours_KS.Context.DB;
 using Tours_KS.Context.Models;
 
 namespace Tours_KS.Forms.Authorization
@@ -26,7 +27,28 @@ namespace Tours_KS.Forms.Authorization
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
+            if(!string.IsNullOrWhiteSpace(textBoxLogin.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
+            {
+                using (var db = new ToursContext())
+                {
+                    var user = db.Users.FirstOrDefault(x => x.Login == textBoxLogin.Text && x.Password == textBoxPassword.Text);
 
+                    if (user == null)
+                    {
+                        MessageBox.Show("Неправильное имя пользователя или пароль!");
+                        textBoxPassword.Clear();
+                    }
+                    else
+                    {
+                        Users.User = user;
+                        TourForm form = new TourForm();
+                        form.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Заполните все поля перед входом!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void buttonEnterGuest_Click(object sender, EventArgs e)
@@ -36,7 +58,7 @@ namespace Tours_KS.Forms.Authorization
                 LastName = string.Empty,
                 FirstName = "Неавторизованный гость",
                 Patronymic = string.Empty,
-                RoleType = Role.Quest
+                RoleType = Role.Guest
             };
             TourForm form = new TourForm();
             form.Show();

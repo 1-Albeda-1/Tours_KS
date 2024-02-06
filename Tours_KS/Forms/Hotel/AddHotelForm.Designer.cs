@@ -177,7 +177,7 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSave);
             this.Name = "AddHotelForm";
-            this.Text = "AddHotelForm";
+            this.Text = "Добавить отель";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStarsCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
