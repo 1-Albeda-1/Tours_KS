@@ -110,6 +110,9 @@
     <EmbeddedResource Include="Forms\Hotel\HotelForm.resx">
       <DependentUpon>HotelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tour\AddTourForm.resx">
       <DependentUpon>AddTourForm.cs</DependentUpon>
     </EmbeddedResource>
