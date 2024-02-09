@@ -34,7 +34,7 @@ namespace Tours_KS.Forms.Order
                 allPrice += item.Price * Tours[item];
             }
 
-            labelPrice.Text = $"{allPrice} РУБ";
+            toolStripLabelPrice.Text = $"Сумма заказа: {allPrice:C2}";
 
             using(var db = new ToursContext())
             {
@@ -58,6 +58,7 @@ namespace Tours_KS.Forms.Order
                     }
                 }
             }
+            toolStripLabelPrice.Text = $"Сумма заказа: {allPrice:C2}";
         }
 
         private void buttonTakeOrder_Click(object sender, EventArgs e)

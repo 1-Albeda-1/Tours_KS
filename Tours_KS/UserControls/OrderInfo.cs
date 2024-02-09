@@ -27,7 +27,7 @@ namespace Tours_KS
             labelDescription.Text = string.IsNullOrWhiteSpace(Tour.Description) ? "Описание отсутсвует" : Tour.Description;
             labelCountTicket.Text = $"Кол-во билетов: {Tour.TicketCount}";
             labelCountry.Text = $"Страна: {Tour.Country}";
-            labelPrice.Text = $"Цена: {Tour.Price} РУБ";
+            labelPrice.Text = $"Цена: {Tour.Price:C2}";
             numericUpDownCount.Value = count;
             listBoxTypeTour.DisplayMember = nameof(Tour.Name);
             listBoxTypeTour.Items.AddRange(Tour.Types.ToArray());

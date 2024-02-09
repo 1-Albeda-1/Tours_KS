@@ -28,70 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelDiscount = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.buttonTakeOrder = new System.Windows.Forms.Button();
             this.comboBoxPoint = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFIO = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelPrice = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabelDiscount = new System.Windows.Forms.ToolStripLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelDiscount
-            // 
-            this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDiscount.Location = new System.Drawing.Point(702, 701);
-            this.labelDiscount.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelDiscount.Name = "labelDiscount";
-            this.labelDiscount.Size = new System.Drawing.Size(34, 39);
-            this.labelDiscount.TabIndex = 22;
-            this.labelDiscount.Text = "0";
-            // 
-            // labelPrice
-            // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPrice.Location = new System.Drawing.Point(702, 655);
-            this.labelPrice.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(34, 39);
-            this.labelPrice.TabIndex = 21;
-            this.labelPrice.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(489, 701);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(224, 39);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Сумма скидки: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(499, 655);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 39);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Сумма заказа: ";
             // 
             // buttonTakeOrder
             // 
             this.buttonTakeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
             this.buttonTakeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonTakeOrder.Font = new System.Drawing.Font("Comic Sans MS", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTakeOrder.Location = new System.Drawing.Point(47, 738);
-            this.buttonTakeOrder.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonTakeOrder.Location = new System.Drawing.Point(680, 341);
             this.buttonTakeOrder.Name = "buttonTakeOrder";
-            this.buttonTakeOrder.Size = new System.Drawing.Size(269, 63);
+            this.buttonTakeOrder.Size = new System.Drawing.Size(161, 59);
             this.buttonTakeOrder.TabIndex = 18;
             this.buttonTakeOrder.Text = "Оформить заказ";
             this.buttonTakeOrder.UseVisualStyleBackColor = false;
@@ -102,76 +60,129 @@
             this.comboBoxPoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPoint.Font = new System.Drawing.Font("Comic Sans MS", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxPoint.FormattingEnabled = true;
-            this.comboBoxPoint.Location = new System.Drawing.Point(52, 659);
-            this.comboBoxPoint.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxPoint.Location = new System.Drawing.Point(27, 358);
+            this.comboBoxPoint.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPoint.Name = "comboBoxPoint";
-            this.comboBoxPoint.Size = new System.Drawing.Size(264, 39);
+            this.comboBoxPoint.Size = new System.Drawing.Size(432, 26);
             this.comboBoxPoint.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(46, 614);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(25, 333);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 33);
+            this.label1.Size = new System.Drawing.Size(146, 23);
             this.label1.TabIndex = 16;
             this.label1.Text = "Пункт получения";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(39, 92);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 50);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1503, 486);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 263);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
             // labelFIO
             // 
             this.labelFIO.AutoSize = true;
             this.labelFIO.Font = new System.Drawing.Font("Comic Sans MS", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFIO.Location = new System.Drawing.Point(56, 32);
-            this.labelFIO.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelFIO.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFIO.Location = new System.Drawing.Point(118, 9);
             this.labelFIO.Name = "labelFIO";
-            this.labelFIO.Size = new System.Drawing.Size(94, 47);
+            this.labelFIO.Size = new System.Drawing.Size(53, 26);
             this.labelFIO.TabIndex = 23;
             this.labelFIO.Text = "ФИО";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(92)))), ((int)(((byte)(147)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelPrice,
+            this.toolStripLabelDiscount});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 414);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(863, 42);
+            this.toolStrip1.TabIndex = 24;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabelPrice
+            // 
+            this.toolStripLabelPrice.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripLabelPrice.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripLabelPrice.Name = "toolStripLabelPrice";
+            this.toolStripLabelPrice.Size = new System.Drawing.Size(125, 39);
+            this.toolStripLabelPrice.Text = "toolStripLabel1";
+            // 
+            // toolStripLabelDiscount
+            // 
+            this.toolStripLabelDiscount.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripLabelDiscount.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripLabelDiscount.Name = "toolStripLabelDiscount";
+            this.toolStripLabelDiscount.Size = new System.Drawing.Size(144, 39);
+            this.toolStripLabelDiscount.Text = "Сумма скидки: 0 ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(92)))), ((int)(((byte)(147)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelFIO);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(863, 45);
+            this.panel1.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 26);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Закзачик:";
+            // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1567, 852);
-            this.Controls.Add(this.labelFIO);
-            this.Controls.Add(this.labelDiscount);
-            this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(863, 456);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.buttonTakeOrder);
             this.Controls.Add(this.comboBoxPoint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(1591, 916);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказ";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelDiscount;
-        private System.Windows.Forms.Label labelPrice;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonTakeOrder;
         private System.Windows.Forms.ComboBox comboBoxPoint;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label labelFIO;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelPrice;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelDiscount;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

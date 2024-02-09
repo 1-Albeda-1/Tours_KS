@@ -76,14 +76,6 @@ namespace Tours_KS.Forms
             Print();
         }
 
-        private void HotelForm_Load(object sender, EventArgs e)
-        {
-            using(var db = new ToursContext())
-            {
-                dataGridView1.DataSource = db.Hotels.Include(x => x.Country).ToList();
-            }
-        }
-
         private void турыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TourForm form = new TourForm();
