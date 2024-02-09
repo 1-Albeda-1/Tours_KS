@@ -79,38 +79,44 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonClose.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.Location = new System.Drawing.Point(565, 220);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(6);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(196, 76);
+            this.buttonClose.Size = new System.Drawing.Size(196, 86);
             this.buttonClose.TabIndex = 30;
             this.buttonClose.Text = "Закрыть";
-            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // buttonEnter
             // 
+            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonEnter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEnter.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.Location = new System.Drawing.Point(68, 220);
             this.buttonEnter.Margin = new System.Windows.Forms.Padding(6);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(196, 76);
+            this.buttonEnter.Size = new System.Drawing.Size(196, 86);
             this.buttonEnter.TabIndex = 29;
             this.buttonEnter.Text = "Войти";
-            this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // buttonEnterGuest
             // 
+            this.buttonEnterGuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonEnterGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEnterGuest.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnterGuest.Location = new System.Drawing.Point(319, 220);
             this.buttonEnterGuest.Margin = new System.Windows.Forms.Padding(6);
             this.buttonEnterGuest.Name = "buttonEnterGuest";
-            this.buttonEnterGuest.Size = new System.Drawing.Size(196, 76);
+            this.buttonEnterGuest.Size = new System.Drawing.Size(196, 86);
             this.buttonEnterGuest.TabIndex = 31;
             this.buttonEnterGuest.Text = "Войти как гость";
-            this.buttonEnterGuest.UseVisualStyleBackColor = true;
+            this.buttonEnterGuest.UseVisualStyleBackColor = false;
             this.buttonEnterGuest.Click += new System.EventHandler(this.buttonEnterGuest_Click);
             // 
             // AuthorizationForm

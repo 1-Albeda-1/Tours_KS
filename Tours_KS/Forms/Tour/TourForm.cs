@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Tours_KS.Context.DB;
 using Tours_KS.Context.Models;
 using Tours_KS.Forms;
+using Tours_KS.Forms.Order;
 using Tours_KS.Forms.Tour;
 using Type = Tours_KS.Context.Models.Type;
 
@@ -20,19 +21,32 @@ namespace Tours_KS
     public partial class TourForm : Form
     {
         private decimal allCount = 0;
+        private Dictionary<Tour, int> Tours = new Dictionary<Tour, int>();
+        
         public TourForm()
         {
             InitializeComponent();
             comboBoxType.DisplayMember = nameof(Context.Models.Type.Name);
             comboBoxType.ValueMember = nameof(Context.Models.Type.Id);
+            buttonAdd.Enabled = !Users.CompareRole(Role.Guest)
+                && !Users.CompareRole(Role.User);
         }
-        private void TourInfo_ImageChanged(object sender, (Tour, byte[]) e)
+        
+
+        private void VisibleList(Tour tour)
         {
-            using (var db = new ToursContext())
+            if (Tours.TryGetValue(tour, out var count))
             {
-                db.Entry(e.Item1).State = EntityState.Modified;
-                e.Item1.ImagePreview = e.Item2;
-                db.SaveChanges();
+                Tours[tour] = ++count;
+            }
+            else
+            {
+                Tours.Add(tour, 1);
+            }
+
+            if (buttonOrder.Visible == false)
+            {
+                buttonOrder.Visible = true;
             }
         }
 
@@ -54,11 +68,11 @@ namespace Tours_KS
 
                 var tours = db.Tours.Include(x => x.Types).ToList();
                 allCount = 0;
+                
                 foreach (var tour in tours)
                 { 
                     var tourInfo = new TourInfo(tour);
                     tourInfo.Parent = flowLayoutPanel1;
-                    tourInfo.ImageChanged += TourInfo_ImageChanged;
                     allCount += tour.Price * tour.TicketCount;
                 }
             }
@@ -153,6 +167,13 @@ namespace Tours_KS
         private void TourForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonOrder_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm(Tours);
+            orderForm.ShowDialog();
+
         }
     }
 }

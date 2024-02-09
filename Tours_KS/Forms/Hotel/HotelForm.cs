@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Tours_KS.Forms
 {
     public partial class HotelForm : Form
     {
-        private int pageSize = 7;
+        private int pageSize = 10;
         private int oldCountPage = -1;
         private readonly BindingSource bindingSource = new BindingSource();
 
@@ -27,6 +28,11 @@ namespace Tours_KS.Forms
             bindingSource.CurrentItemChanged += Bs_CurrentItemChanged;
             dataGridView1.AutoGenerateColumns = false;
             Print();
+            buttonAdd.Enabled =
+            buttonDelete.Enabled =
+            buttonEdit.Enabled =
+                !Users.CompareRole(Role.Guest)
+                && !Users.CompareRole(Role.User);
         }
 
         private void Print()
@@ -55,9 +61,10 @@ namespace Tours_KS.Forms
 
                     bindingNavigatorHotels.BindingSource = bindingSource;
                 }
-
+                
+                toolStripLabelAllCount.Text = $"Кол-во записей: {count}";
                 dataGridView1.DataSource = db.Hotels.Include(x => x.Country)
-                .OrderBy(x => x.Name)
+                    .OrderBy(x => x.Name)
                     .Skip(bindingSource.Position * pageSize)
                     .Take(pageSize)
                     .ToList();

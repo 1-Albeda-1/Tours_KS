@@ -43,7 +43,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabelAllCount = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorHotels = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -71,8 +71,7 @@
             this.выйтиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1344, 41);
+            this.menuStrip1.Size = new System.Drawing.Size(1071, 41);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +108,7 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(37, 122);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 72;
             this.dataGridView1.Size = new System.Drawing.Size(948, 524);
@@ -153,38 +152,44 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAdd.Location = new System.Drawing.Point(1111, 122);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAdd.Location = new System.Drawing.Point(178, 679);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(183, 70);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelete.Location = new System.Drawing.Point(1111, 220);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonDelete.Location = new System.Drawing.Point(401, 679);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(6);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(183, 70);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Удалить";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEdit.Location = new System.Drawing.Point(1111, 319);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonEdit.Location = new System.Drawing.Point(622, 679);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(6);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(183, 70);
             this.buttonEdit.TabIndex = 5;
             this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // toolStrip1
@@ -193,21 +198,21 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 718);
+            this.toolStripLabelAllCount});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 801);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1344, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(1071, 37);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // toolStripLabelAllCount
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(177, 31);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.toolStripLabelAllCount.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripLabelAllCount.ForeColor = System.Drawing.SystemColors.Control;
+            this.toolStripLabelAllCount.Name = "toolStripLabelAllCount";
+            this.toolStripLabelAllCount.Size = new System.Drawing.Size(177, 31);
+            this.toolStripLabelAllCount.Text = "toolStripLabel1";
             // 
             // bindingNavigatorHotels
             // 
@@ -231,7 +236,7 @@
             this.bindingNavigatorHotels.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorHotels.Name = "bindingNavigatorHotels";
             this.bindingNavigatorHotels.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorHotels.Size = new System.Drawing.Size(1344, 38);
+            this.bindingNavigatorHotels.Size = new System.Drawing.Size(1071, 38);
             this.bindingNavigatorHotels.TabIndex = 7;
             this.bindingNavigatorHotels.Text = "bindingNavigator1";
             // 
@@ -270,7 +275,7 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
@@ -293,14 +298,14 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 755);
+            this.ClientSize = new System.Drawing.Size(1071, 838);
             this.Controls.Add(this.bindingNavigatorHotels);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.buttonEdit);
@@ -308,7 +313,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HotelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отели";
@@ -339,7 +344,7 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelAllCount;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
         private System.Windows.Forms.BindingNavigator bindingNavigatorHotels;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

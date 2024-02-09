@@ -85,6 +85,8 @@
             // 
             // buttonTakeOrder
             // 
+            this.buttonTakeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
+            this.buttonTakeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonTakeOrder.Font = new System.Drawing.Font("Comic Sans MS", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTakeOrder.Location = new System.Drawing.Point(47, 738);
             this.buttonTakeOrder.Margin = new System.Windows.Forms.Padding(6);
@@ -92,7 +94,7 @@
             this.buttonTakeOrder.Size = new System.Drawing.Size(269, 63);
             this.buttonTakeOrder.TabIndex = 18;
             this.buttonTakeOrder.Text = "Оформить заказ";
-            this.buttonTakeOrder.UseVisualStyleBackColor = true;
+            this.buttonTakeOrder.UseVisualStyleBackColor = false;
             this.buttonTakeOrder.Click += new System.EventHandler(this.buttonTakeOrder_Click);
             // 
             // comboBoxPoint
@@ -156,6 +158,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1204, 916);
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказ";
             this.ResumeLayout(false);
             this.PerformLayout();

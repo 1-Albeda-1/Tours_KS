@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,8 +17,9 @@ namespace Tours_KS
 {
     public partial class TourInfo : UserControl
     {
-        private readonly Tour tour;
-        private EventHandler<(Tour, byte[])> onImageChanged;
+        public Tour tour { get; set; }
+        public event Action<Tour> AddToOrder;
+
         public TourInfo(Tour tour)
         {
             InitializeComponent();
@@ -38,27 +40,19 @@ namespace Tours_KS
             }
         }
 
-        public event EventHandler<(Tour, byte[])> ImageChanged
-        {
-            add
-            {
-                onImageChanged += value;
-            }
-            remove
-            {
-                onImageChanged -= value;
-            }
-        }
-
         private void buttonImage_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() != DialogResult.OK)
             {
-                return;
+                var image = File.ReadAllBytes(openFileDialog1.FileName);
+                using (var db = new ToursContext())
+                {
+                    tour.ImagePreview = image;
+                    db.Entry(tour).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                pictureBoxImageTour.Image = Image.FromStream(new MemoryStream(image));
             }
-            var image = File.ReadAllBytes(openFileDialog1.FileName);
-            onImageChanged?.Invoke(this, (tour, image));
-            pictureBoxImageTour.Image = Image.FromStream(new MemoryStream(image));
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -76,6 +70,16 @@ namespace Tours_KS
                     InitTour(tour1);
                 }
             }
+        }
+
+        private void добавитьКЗаказуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tour.IsActual)
+            {
+                AddToOrder?.Invoke(tour);
+            }
+            else
+                MessageBox.Show("Данный тур является не актуальным!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
