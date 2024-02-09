@@ -14,7 +14,7 @@ namespace Tours_KS.Context.Models
 
         public string Description { get; set; }
 
-        public ICollection<Tour> Tours { get; set; }
+        public virtual ICollection<Tour> Tours { get; set; }
 
         public Type()
         {

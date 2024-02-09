@@ -22,7 +22,7 @@ namespace Tours_KS.Context.Models
         
         public Role RoleType { get; set; }
 
-        public ICollection<Order> Order { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
 
     }
 }

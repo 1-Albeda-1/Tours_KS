@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202401290724581_ChangeUser.designer.cs">
       <DependentUpon>202401290724581_ChangeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402091233237_ReceivingPoint.cs" />
+    <Compile Include="Migrations\202402091233237_ReceivingPoint.designer.cs">
+      <DependentUpon>202402091233237_ReceivingPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Hotel.cs" />
@@ -71,6 +75,7 @@
     <Compile Include="Models\HotelImage.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Enums\Role.cs" />
+    <Compile Include="Models\ReceivingPoint.cs" />
     <Compile Include="Models\Tour.cs" />
     <Compile Include="Models\Type.cs" />
     <Compile Include="Models\User.cs" />
@@ -92,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401290724581_ChangeUser.resx">
       <DependentUpon>202401290724581_ChangeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402091233237_ReceivingPoint.resx">
+      <DependentUpon>202402091233237_ReceivingPoint.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,6 +19,7 @@ namespace Tours_KS.Context.DB
         public DbSet<Tour> Tours { get; set; }
         public DbSet<Type> Types { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ReceivingPoint> ReceivingPoints {  get; set; }
 
         public ToursContext() : base("DefaultConnection") 
         {

@@ -20,9 +20,9 @@ namespace Tours_KS.Context.Models
         
         public string Description { get; set; }
 
-        public ICollection<Tour> Tours { get; set; }
-        public ICollection<HotelComment> HotelComments { get; set; }
-        public ICollection<HotelImage> HotelImages { get; set; }
+        public virtual ICollection<Tour> Tours { get; set; }
+        public virtual ICollection<HotelComment> HotelComments { get; set; }
+        public virtual ICollection<HotelImage> HotelImages { get; set; }
         public Hotel()
         {
             Tours = new HashSet<Tour>();

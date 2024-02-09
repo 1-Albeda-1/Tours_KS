@@ -19,7 +19,14 @@ namespace Tours_KS.Context.Models
         public DateTimeOffset OrderDate { get; set; }
         
         public short AllSale {  get; set; }
-        public ICollection<Tour> Tours { get; set; }
+        
+        public int ReceivingPointId { get; set; }
+        
+        public virtual ReceivingPoint ReceivingPoint { get; set; }
+        
+        public int OrderCode { get; set; }
+
+        public virtual ICollection<Tour> Tours { get; set; }
         
         public Order()
         {

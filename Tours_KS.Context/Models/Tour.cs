@@ -27,16 +27,34 @@ namespace Tours_KS.Context.Models
         public Country Country { get; set; }
 
 
-        public ICollection<Hotel> Hotels { get; set; }
+        public virtual ICollection<Hotel> Hotels { get; set; }
 
-        public ICollection<Type> Types { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Type> Types { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
 
         public Tour()
         {
             Hotels = new HashSet<Hotel>();
             Types = new HashSet<Type>();
             Orders = new HashSet<Order>();
+        }
+
+        public override int GetHashCode()
+         => Id.GetHashCode();
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (obj is Tour tour)
+            {
+                return tour.Id.Equals(Id);
+            }
+
+            return false;
         }
     }
 }
