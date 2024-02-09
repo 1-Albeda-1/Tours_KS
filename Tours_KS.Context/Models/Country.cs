@@ -19,6 +19,8 @@ namespace Tours_KS.Context.Models
         public virtual ICollection<Tour> Tours { get; set; }
 
         public override string ToString()
-         => Name;
+        {
+            return Name;
+        }
     }
 }

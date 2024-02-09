@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 363);
+            this.ClientSize = new System.Drawing.Size(818, 346);
             this.Controls.Add(this.buttonEnterGuest);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonEnter);
@@ -125,7 +125,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(842, 410);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(842, 410);
             this.Name = "AuthorizationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();

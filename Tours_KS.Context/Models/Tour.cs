@@ -24,7 +24,7 @@ namespace Tours_KS.Context.Models
         
         public string CountryCode { get; set; }
 
-        public Country Country { get; set; }
+        public virtual Country Country { get; set; }
 
 
         public virtual ICollection<Hotel> Hotels { get; set; }

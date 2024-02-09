@@ -33,7 +33,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonTakeOrder = new System.Windows.Forms.Button();
-            this.comboBoxAddress = new System.Windows.Forms.ComboBox();
+            this.comboBoxPoint = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFIO = new System.Windows.Forms.Label();
@@ -93,17 +93,18 @@
             this.buttonTakeOrder.TabIndex = 18;
             this.buttonTakeOrder.Text = "Оформить заказ";
             this.buttonTakeOrder.UseVisualStyleBackColor = true;
+            this.buttonTakeOrder.Click += new System.EventHandler(this.buttonTakeOrder_Click);
             // 
-            // comboBoxAddress
+            // comboBoxPoint
             // 
-            this.comboBoxAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAddress.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxAddress.FormattingEnabled = true;
-            this.comboBoxAddress.Location = new System.Drawing.Point(52, 659);
-            this.comboBoxAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxAddress.Name = "comboBoxAddress";
-            this.comboBoxAddress.Size = new System.Drawing.Size(264, 45);
-            this.comboBoxAddress.TabIndex = 17;
+            this.comboBoxPoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPoint.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxPoint.FormattingEnabled = true;
+            this.comboBoxPoint.Location = new System.Drawing.Point(52, 659);
+            this.comboBoxPoint.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxPoint.Name = "comboBoxPoint";
+            this.comboBoxPoint.Size = new System.Drawing.Size(264, 45);
+            this.comboBoxPoint.TabIndex = 17;
             // 
             // label1
             // 
@@ -132,7 +133,7 @@
             this.labelFIO.Location = new System.Drawing.Point(56, 32);
             this.labelFIO.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelFIO.Name = "labelFIO";
-            this.labelFIO.Size = new System.Drawing.Size(92, 46);
+            this.labelFIO.Size = new System.Drawing.Size(94, 47);
             this.labelFIO.TabIndex = 23;
             this.labelFIO.Text = "ФИО";
             // 
@@ -147,9 +148,13 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonTakeOrder);
-            this.Controls.Add(this.comboBoxAddress);
+            this.Controls.Add(this.comboBoxPoint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1204, 916);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1204, 916);
             this.Name = "OrderForm";
             this.Text = "Заказ";
             this.ResumeLayout(false);
@@ -164,7 +169,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonTakeOrder;
-        private System.Windows.Forms.ComboBox comboBoxAddress;
+        private System.Windows.Forms.ComboBox comboBoxPoint;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label labelFIO;
