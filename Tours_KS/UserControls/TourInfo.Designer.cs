@@ -60,9 +60,10 @@
             // 
             // pictureBoxImageTour
             // 
+            this.pictureBoxImageTour.ContextMenuStrip = this.contextMenuStrip1;
             this.pictureBoxImageTour.Image = global::Tours_KS.Properties.Resources.picture;
             this.pictureBoxImageTour.InitialImage = null;
-            this.pictureBoxImageTour.Location = new System.Drawing.Point(51, 163);
+            this.pictureBoxImageTour.Location = new System.Drawing.Point(62, 163);
             this.pictureBoxImageTour.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxImageTour.Name = "pictureBoxImageTour";
             this.pictureBoxImageTour.Size = new System.Drawing.Size(380, 225);

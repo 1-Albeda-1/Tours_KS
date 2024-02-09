@@ -66,12 +66,13 @@ namespace Tours_KS
 
                 comboBoxType.SelectedIndex = 0;
 
-                var tours = db.Tours.Include(x => x.Types).ToList();
+                var tours = db.Tours.Include(x => x.Types).Include(x => x.Country).ToList();
                 allCount = 0;
                 
                 foreach (var tour in tours)
                 { 
                     var tourInfo = new TourInfo(tour);
+                    tourInfo.AddToOrder += VisibleList;
                     tourInfo.Parent = flowLayoutPanel1;
                     allCount += tour.Price * tour.TicketCount;
                 }

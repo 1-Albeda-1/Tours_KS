@@ -38,6 +38,8 @@ namespace Tours_KS
             {
                 pictureBoxImageTour.Image = Image.FromStream(new MemoryStream(tour.ImagePreview));
             }
+            buttonEdit.Enabled = buttonImage.Enabled = !Users.CompareRole(Role.Guest)
+                && !Users.CompareRole(Role.User);
         }
 
         private void buttonImage_Click(object sender, EventArgs e)
