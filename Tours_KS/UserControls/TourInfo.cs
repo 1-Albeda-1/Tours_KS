@@ -23,8 +23,10 @@ namespace Tours_KS
         public TourInfo(Tour tour)
         {
             InitializeComponent();
+            var baseImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "picture.png");
+            pictureBoxImageTour.Image = Image.FromFile(baseImagePath);
             this.tour = tour;
-            InitTour(tour);
+            InitTour(tour);          
         }
         public Tour Tour => tour;
         private void InitTour(Tour tour)
@@ -33,7 +35,7 @@ namespace Tours_KS
             labelPrice.Text = $"{tour.Price:C2}";
             labelActual.Text = tour.IsActual ? "Актуален" : "Не актуален";
             labelActual.ForeColor = tour.IsActual ? Color.Green : Color.Red;
-            labelCount.Text = $"Билетов: {tour.TicketCount.ToString()}";
+            labelCount.Text = $"Билетов: {tour.TicketCount}";
             if (tour.ImagePreview != null)
             {
                 pictureBoxImageTour.Image = Image.FromStream(new MemoryStream(tour.ImagePreview));

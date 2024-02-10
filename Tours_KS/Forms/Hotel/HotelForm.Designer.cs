@@ -36,6 +36,10 @@
             this.турыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Columne10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -50,10 +54,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.Columne10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -121,6 +121,42 @@
             this.dataGridView1.RowHeadersWidth = 72;
             this.dataGridView1.Size = new System.Drawing.Size(560, 284);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // Columne10
+            // 
+            this.Columne10.DataPropertyName = "Name";
+            this.Columne10.HeaderText = "Название";
+            this.Columne10.MinimumWidth = 9;
+            this.Columne10.Name = "Columne10";
+            this.Columne10.ReadOnly = true;
+            this.Columne10.Width = 175;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CountOfStars";
+            this.Column1.HeaderText = "Кол-во звезд";
+            this.Column1.MinimumWidth = 9;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 175;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Country";
+            this.Column2.HeaderText = "Страна";
+            this.Column2.MinimumWidth = 9;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Description";
+            this.Column3.HeaderText = "Описание";
+            this.Column3.MinimumWidth = 9;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 175;
             // 
             // buttonAdd
             // 
@@ -268,42 +304,6 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 35);
-            // 
-            // Columne10
-            // 
-            this.Columne10.DataPropertyName = "Name";
-            this.Columne10.HeaderText = "Название";
-            this.Columne10.MinimumWidth = 9;
-            this.Columne10.Name = "Columne10";
-            this.Columne10.ReadOnly = true;
-            this.Columne10.Width = 175;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CountOfStars";
-            this.Column1.HeaderText = "Кол-во звезд";
-            this.Column1.MinimumWidth = 9;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 175;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Country";
-            this.Column2.HeaderText = "Страна";
-            this.Column2.MinimumWidth = 9;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 175;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Description";
-            this.Column3.HeaderText = "Описание";
-            this.Column3.MinimumWidth = 9;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 175;
             // 
             // HotelForm
             // 
