@@ -18,6 +18,8 @@ namespace Tours_KS
         public Form1()
         {
             InitializeComponent();
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");//Добавить: , tour.ImagePreview);
+            pictureBox1.Image = Image.FromFile(path);
         }
 
         private void button1_Click(object sender, EventArgs e)
