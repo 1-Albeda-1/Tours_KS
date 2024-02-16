@@ -1,4 +1,4 @@
 # Смирнова Кристина Алексеевна группа ИП-20-3
 ## Задание "Туры"
 ## Диаграмма базы данных:
-![image](https://github.com/1-Albeda-1/Tours_KS/assets/106802110/bf59af3e-e6b7-466f-91ce-fe7a81af0677)
+![image](https://github.com/1-Albeda-1/Tours_KS/assets/106802110/4d523415-e5dd-47ee-8bcd-411003e8504f)
