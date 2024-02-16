@@ -62,7 +62,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 102);
+            this.panel1.Size = new System.Drawing.Size(875, 102);
             this.panel1.TabIndex = 0;
             // 
             // buttonOrder
@@ -175,7 +175,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 127);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(890, 289);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(875, 271);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // menuStrip1
@@ -189,7 +189,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(890, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(875, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -217,15 +217,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 416);
+            this.ClientSize = new System.Drawing.Size(875, 398);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(945, 455);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(869, 455);
+            this.MinimumSize = new System.Drawing.Size(891, 437);
             this.Name = "TourForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Туры";

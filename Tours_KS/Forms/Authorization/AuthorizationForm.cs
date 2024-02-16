@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tours_KS.Context.DB;
 using Tours_KS.Context.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Tours_KS.Forms.Authorization
 {
@@ -17,6 +18,7 @@ namespace Tours_KS.Forms.Authorization
         public AuthorizationForm()
         {
             InitializeComponent();
+            textBoxPassword.UseSystemPasswordChar = true;
         }
 
 
@@ -63,6 +65,18 @@ namespace Tours_KS.Forms.Authorization
             TourForm form = new TourForm();
             form.Show();
             this.Hide();
+        }
+
+        private void checkBoxPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPass.Checked)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

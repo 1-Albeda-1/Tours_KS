@@ -86,9 +86,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\picture.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\202401251556199_CreateDB.resx">
       <DependentUpon>202401251556199_CreateDB.cs</DependentUpon>
     </EmbeddedResource>

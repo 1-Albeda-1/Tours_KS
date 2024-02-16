@@ -46,7 +46,7 @@
             // 
             this.buttonTakeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(227)))), ((int)(((byte)(232)))));
             this.buttonTakeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonTakeOrder.Font = new System.Drawing.Font("Comic Sans MS", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTakeOrder.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTakeOrder.Location = new System.Drawing.Point(680, 341);
             this.buttonTakeOrder.Name = "buttonTakeOrder";
             this.buttonTakeOrder.Size = new System.Drawing.Size(161, 59);

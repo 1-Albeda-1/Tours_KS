@@ -111,8 +111,7 @@ namespace Tours_KS.Forms
         {
             var hotelId = (Tours_KS.Context.Models.Hotel)dataGridView1.SelectedRows[0].DataBoundItem;
 
-            if (hotelId == null)
-                return;
+            if (hotelId == null) return;
             using(var db = new ToursContext())
             {
                 var hotel1 = db.Hotels.FirstOrDefault(x => x.Id == hotelId.Id);
@@ -139,7 +138,7 @@ namespace Tours_KS.Forms
                 {
                     MessageBox.Show("Этот отель подходит к актуальным турам!!");
                 }
-                else if (MessageBox.Show($"Удалить ли отель {hotelId.Name}?", "Подтвердите!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                else if (MessageBox.Show($"Удалить отель {hotelId.Name}?", "Подтвердите!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     db.Hotels.Remove(hotel1);
                     db.SaveChanges();
